@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Loading with Intersection Observer</title>
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lazy Loading</h1>
+
+    <img src="multimedia/proyecto.png" alt="Image 1">
+    <img src="multimedia/proyecto.png" alt="Image 2">
+    <img src="multimedia/proyecto.png" alt="Image 3">
+    <img data-src="multimedia/programming.png" alt="Image 4" loading="lazy">
+    <img data-src="multimedia/programming.png" alt="Image 5" loading="lazy">
+    <img data-src="multimedia/programming.png" alt="Image 6" loading="lazy">
+    <img data-src="multimedia/programming.png" alt="Image 7" loading="lazy">
+    <img data-src="multimedia/programming.png" alt="Image 8" loading="lazy">
+    <img data-src="multimedia/programming.png" alt="Image 9" loading="lazy">
+    <img data-src="multimedia/programming.png" alt="Image 10" loading="lazy">
+    <img data-src="multimedia/programming.png" alt="Image 11" loading="lazy">
+    <img data-src="multimedia/programming.png" alt="Image 12" loading="lazy">
+    <img data-src="multimedia/programming.png" alt="Image 13" loading="lazy">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            function lazyLoadImages() {
+                var lazyImages = document.querySelectorAll('img[data-src]');
+                
+                var intersectionObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            var img = entry.target;
+                            img.src = img.getAttribute('data-src');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                });
+                lazyImages.forEach(function(img) {
+                    intersectionObserver.observe(img);
+                });
+            }
+
+            lazyLoadImages();
+        });
+    </script>
+
+</body>
+</html>

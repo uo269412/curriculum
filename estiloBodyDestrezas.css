@@ -1,0 +1,150 @@
+  /*001*/
+  body {
+    grid-template-areas: "header header"
+        "nav nav"
+        "h2 h2"
+        "p p"
+        "section section"
+        "article article"
+        "footer footer"
+        "address address";
+}
+
+h2 {
+  grid-area:h2;
+}
+
+p {
+  grid-area:p;
+}
+article {
+  grid-area: article;
+}
+section > button {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  cursor: pointer;
+  border-radius: 12px;
+  background-color:rgb(134, 194, 250);
+  padding: 5%
+}
+
+.contenedor {
+  display: flex;
+  align-items: center;
+}
+
+.elemento0 {
+  background-color:rgb(91, 169, 243);
+  animation: animacionAncho 4s linear forwards; 
+}
+.elemento1 {
+  background-color:rgb(245, 118, 69);
+  animation: animacionAncho1 4s linear forwards; 
+}
+.elemento2 {
+  background-color:rgb(60, 212, 14);
+  animation: animacionAncho2 4s linear forwards; 
+}
+.elemento3 {
+  background-color:rgb(163, 163, 163);
+  animation: animacionAncho3 4s linear forwards; 
+}
+h3 {
+  color: black;
+}
+
+.imagen-container {
+  margin-left: 10px;
+}
+
+.imagen {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+@keyframes animacionAncho {
+  0% {
+    width: 50%; 
+  }
+  25% {
+    width: 55%; 
+  }
+  50% {
+    width: 60%; 
+  }
+  75% {
+    width: 65%; 
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes animacionAncho1 {
+  0% {
+    width: 50%; 
+  }
+  25% {
+    width: 60%; 
+  }
+  50% {
+    width: 70%; 
+  }
+  75% {
+    width: 85%; 
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes animacionAncho2 {
+  0% {
+    width: 50%; 
+  }
+  25% {
+    width: 57%; 
+  }
+  50% {
+    width: 65%; 
+  }
+  75% {
+    width: 72%; 
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes animacionAncho3 {
+  0% {
+    width: 50%; 
+  }
+  25% {
+    width: 60%; 
+  }
+  50% {
+    width: 70%; 
+  }
+  75% {
+    width: 80%; 
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+div {
+  width: 80%;
+  height: 100px;
+  border-radius: 2em;
+  transition: width 2s ease;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  margin-left: 2em;
+}
+

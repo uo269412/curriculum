@@ -1,0 +1,12 @@
+ul {
+    list-style-type: circle;
+
+}
+li {
+    padding: 1%;
+    font-weight: bold;
+    font-size:1vw;
+}
+ul li:hover {
+    color:rgb(231, 247, 255);
+}

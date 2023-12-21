@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="es">
+    <head>
+        <!-- Datos que describen el documento -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Javier Carrillo González"/>
+		<meta name="description" content="Página web sobre Javier Carrillo González"/>
+        <title>Página principal de Javier Carrillo González: Destrezas</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css" />
+        <link rel="stylesheet" type="text/css" href="estiloBodyDestrezas.css" />
+        <link rel="stylesheet" type="text/css" href="estiloSection.css" />
+        <script src="cargarContenido.js"></script>
+    </head>
+    <body>
+    <header>
+        <h1>Javier Carrillo González</h1>
+    </header>
+    <nav>
+        <a title ="Enlace a la página principal" href="index.html">
+            <button>
+                <img src="multimedia/usuario.png" alt="Imagen que representa la sección de página personal">
+                <p>Página personal</p>
+            </button>
+        </a>
+        <a title ="Enlace a la página sobre los estudios realizados y toda la actividad profesional realizada" href="estudios.html">
+            <button>
+                <img src="multimedia/estudio.png" alt="Imagen que representa la sección de estudios">
+                <p>Estudios y trabajo</p>
+            </button>
+        </a>
+        <a title ="Enlace a la página sobre destrezas adquiridas e idiomas" href="destrezas.html">
+            <button id="selected">
+                <img src="multimedia/destreza.png" alt="Imagen que representa la sección de destrezas">
+                <p>Destrezas e idiomas</p>
+            </button>
+        </a>
+        <a title ="Enlace a la página sobre los proyectos realizados" href="proyectos_personales.html">
+            <button>
+                <img src="multimedia/proyecto.png" alt="Imagen que representa la sección de proyectos personales">
+                <p>Proyectos personales</p>
+            </button>
+        </a>
+    </nav> 
+        <h2>Destrezas destacables</h2>
+        <p>En el contexto profesional y laboral, considero fundamental destacar diversas destrezas que contribuyen significativamente a mi perfil. Este pequeño listado abarca habilidades que no solo me caracterizan, sino que también reflejan mi compromiso con el crecimiento y la eficacia en cualquier entorno de trabajo.</p>
+        <section id="section4">
+            <button onclick="cargarContenido('Programación')"> <img src="multimedia/programming.png" alt="Imagen de programación"><p>Programación</p></button>
+            <button onclick="cargarContenido('Responsabilidad y compromiso')"> <img src="multimedia/responsability.png" alt="Imagen de responsabilidad"><p>Responsabilidad y compromiso</p></button>
+            <button onclick="cargarContenido('Segundo idioma: Inglés')"><img src="multimedia/english.png" alt="Imagen de inglés"><p>Segundo idioma: Inglés</p></button>
+            <button onclick="cargarContenido('Carné de conducir permiso B')"><img src="multimedia/car.png" alt="Imagen del permiso de carné de conducir"><p>Carné de conducir permiso B</p></button>
+        </section>
+        <article id="contenidoArticulo">
+        </article>
+        <footer>
+            <p>Autor: Javier Carrillo González</p>
+            <p><a href="mailto:uo269412@uniovi.es">uo269412@uniovi.es</a></p>
+        </footer>
+        <address>
+            <p>Adicionalmente, se puede contactar via gmail</p>
+            <p><a href="mailto:javiercarillo232@gmail.com">javiercarrillo232@gmail.com</a></p>
+        </address>
+
+    </body>
+</html>

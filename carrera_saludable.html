@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html lang="es">
+    <head>
+        <!-- Datos que describen el documento -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Javier Carrillo González"/>
+		<meta name="description" content="Página web sobre Javier Carrillo González"/>
+        <title>Página principal de Javier Carrillo González: Proyectos personales -> Carrera Saludable</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css" />
+        <link rel="stylesheet" type="text/css" href="estiloBodyCarreraSaludable.css" />
+        <script src="gallery.js"></script>
+    </head>
+    <body>
+    <header>
+        <h1>Javier Carrillo González</h1>
+    </header>
+    <nav>
+        <a title ="Enlace a la página principal" href="index.html">
+            <button>
+                <img src="multimedia/usuario.png" alt="Imagen que representa la sección de página personal">
+                <p>Página personal</p>
+            </button>
+        </a>
+        <a title ="Enlace a la página sobre los estudios realizados y toda la actividad profesional realizada" href="estudios.html">
+            <button>
+                <img src="multimedia/estudio.png" alt="Imagen que representa la sección de estudios">
+                <p>Estudios y trabajo</p>
+            </button>
+        </a>
+        <a title ="Enlace a la página sobre destrezas adquiridas e idiomas" href="destrezas.html">
+            <button>
+                <img src="multimedia/destreza.png" alt="Imagen que representa la sección de destrezas">
+                <p>Destrezas e idiomas</p>
+            </button>
+        </a>
+        <a title ="Enlace a la página sobre los proyectos realizados" href="proyectos_personales.html">
+            <button id="selected">
+                <img src="multimedia/proyecto.png" alt="Imagen que representa la sección de proyectos personales">
+                <p>Proyectos personales</p>
+            </button>
+        </a>
+    </nav> 
+        <h2>Trabajo Fin de Grado: Carrera Saludable</h2>
+        <p>Aquí podemos ver una pequeña galería y vídeo acerca del Trabajo de Fin de Grado Carrera Saludable para entender mejor en que consiste la jugabilidad de este videojuego.
+            En la galería podremos consultar el propio manual que se puede consultar mientras se juega y en el vídeo podremos observar una pequeña demostración de una partida de Carrera Saludable.</p>
+        <article>
+            <img id="destacada" src="multimedia/tfg/0.png" alt="Imagen del manual">
+            <img src="multimedia/tfg/0.png" onClick ="changeImage(this.src)" alt="Imagen del manual">
+            <img src="multimedia/tfg/1.png" onClick ="changeImage(this.src)" alt="Imagen del manual">
+            <img src="multimedia/tfg/2.png" onClick ="changeImage(this.src)" alt="Imagen del manual">
+            <img src="multimedia/tfg/3.png" onClick ="changeImage(this.src)" alt="Imagen del manual">
+            <img data-src="multimedia/tfg/3_5.png" onClick ="changeImage(this.src)" alt="Imagen del manual" loading="lazy">
+            <img data-src="multimedia/tfg/4.png" onClick ="changeImage(this.src)" alt="Imagen del manual" loading="lazy">
+            <img data-src="multimedia/tfg/5.png" onClick ="changeImage(this.src)" alt="Imagen del manual" loading="lazy">
+            <img data-src="multimedia/tfg/6.png" onClick ="changeImage(this.src)" alt="Imagen del manual" loading="lazy">
+            <img data-src="multimedia/tfg/7.png" onClick ="changeImage(this.src)" alt="Imagen del manual" loading="lazy">
+            <img data-src="multimedia/tfg/8.png" onClick ="changeImage(this.src)" alt="Imagen del manual" loading="lazy">
+            <img data-src="multimedia/tfg/9.png" onClick ="changeImage(this.src)" alt="Imagen del manual" loading="lazy">
+            <img data-src="multimedia/tfg/10.png" onClick ="changeImage(this.src)" alt="Imagen del manual" loading="lazy">
+            <img data-src="multimedia/tfg/11.png" onClick ="changeImage(this.src)" alt="Imagen del manual" loading="lazy">
+            <img data-src="multimedia/tfg/13.png" onClick ="changeImage(this.src)" alt="Imagen del manual" loading="lazy">
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    function lazyLoadImages() {
+                        var lazyImages = document.querySelectorAll('img[data-src]');
+                        
+                        var intersectionObserver = new IntersectionObserver(function(entries, observer) {
+                            entries.forEach(function(entry) {
+                                if (entry.isIntersecting) {
+                                    var img = entry.target;
+                                    img.src = img.getAttribute('data-src');
+                                    observer.unobserve(entry.target);
+                                }
+                            });
+                        });
+                        lazyImages.forEach(function(img) {
+                            intersectionObserver.observe(img);
+                        });
+                    }
+        
+                    lazyLoadImages();
+                });
+            </script>
+        </article>
+        <section>
+            <h3>Demostración de juego</h3>
+            <p>Esta demostración constituye una pequeña partida donde se puede ver la generación de pseudoaleatoria de elementos, la interacción del jugador con los objetos que se generan en las diferentes casillas, la interacción con las mejoras que recoge el usuario, las opciones de movilidad del jugador, la ganancia de salud y puntos y como finalizar la partida.</p>
+            <video id="my-video" class="video-js" controls preload="auto" width="1080" height="720" poster="multimedia/tfg/thumbnail.png"data-setup="{}">
+                <source src="multimedia/tfg/demo.mp4" type="video/mp4" />
+            </video>
+        </section>
+        <footer>
+            <p>Autor: Javier Carrillo González</p>
+            <p><a href="mailto:uo269412@uniovi.es">uo269412@uniovi.es</a></p>
+        </footer>
+        <address>
+            <p>Adicionalmente, se puede contactar via gmail</p>
+            <p><a href="mailto:javiercarillo232@gmail.com">javiercarrillo232@gmail.com</a></p>
+        </address>
+    </body>
+</html>

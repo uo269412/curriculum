@@ -1,0 +1,113 @@
+body {
+  grid-template-areas: "header header"
+    "nav nav"
+    "aside main"
+    "aside main"
+    "footer footer"
+    "address address";
+}
+main {
+  grid-area: main;
+  background-color:#bdc7fc;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: auto;
+  gap:3%;
+  border-radius: 0.4em;
+  padding: 3%;
+  padding-bottom: 10%;
+}
+article {
+  background-color:rgb(255, 255, 255);
+  border-radius: 0.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+}
+article:hover {
+  -ms-transform: scale(1.02); /* IE 9 */
+  -webkit-transform: scale(1.02); /* Safari 3-8 */
+  transform: scale(1.02); 
+}
+aside article {
+  background-color: #ccd4fd;
+  border-radius: 0.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+}
+main article:nth-child(1) {
+  grid-column: span 4;
+  grid-row:span 2;
+  font-size: 200%;
+}
+main article:nth-child(2) {
+  grid-column: span 2;
+  font-size: 200%;
+}
+main article:nth-last-child(2) {
+  grid-column: span 2;
+  font-size: 200%;
+}
+main article:nth-last-child(1) {
+  grid-column: span 1;
+  font-size: 200%;
+}
+@media only screen and (max-width: 768px) {
+  body {
+      max-width: 30rem;
+      margin: auto;
+      font-family: "Optima", sans-serif;
+      padding:2%;
+      font-size:2vw;
+      background-color:white;
+      color:#003049;
+
+      grid-template-columns: 50% 50%;
+  }
+  ul > li {
+      font-size:2vw;
+  }
+  nav {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 0.2vw;
+      grid-auto-rows: minmax(100px, auto);
+      padding:2%;
+      text-align: center;
+  }
+  nav > a > button > p{
+      font-size: 2vw;
+  }
+  #icon {
+      display: block;
+      width: 20%;
+      height: 20%;
+      max-width: 100%;
+      max-height: 90%;
+
+  }
+  main {
+    grid-template-columns: repeat(1,1fr);
+    padding-bottom: 120%;
+  }
+  main article:nth-child(1) {
+    grid-column: span 1;
+    grid-row:span 1;
+    font-size: 200%;
+  }
+  main article:nth-child(2) {
+    grid-column: span 1;
+    font-size: 200%;
+  }
+  main article:nth-last-child(2) {
+    grid-column: span 1;
+    font-size: 200%;
+  }
+  main article:nth-last-child(1) {
+    grid-column: span 1;
+    font-size: 200%;
+  }
+}
